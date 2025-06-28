@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,28 +11,28 @@
     <div class="barra">
         <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Logo" class="logo" />
         <div class="marca">Equilibrio Vital</div>
-        <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesión</button>
+        <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesiÃ³n</button>
     </div>
     <div class="panel">
         <div class="menu-lateral">
             <button class="btn-menu" onclick="location.href='dashboard.jsp'">Dashboard</button>
             <button class="btn-menu activo">Gestionar pacientes</button>
-            <button class="btn-menu" onclick="location.href='crearSerie.jsp'">Crear serie terapéutica</button>
+            <button class="btn-menu" onclick="location.href='crearSerie.jsp'">Crear serie terapÃ©utica</button>
             <button class="btn-menu" onclick="location.href='asignarSerie.jsp'">Asignar serie</button>
         </div>
         <div class="contenido-panel">
             <div class="tarjeta">
-                <h2>Editando a: Ana Pérez</h2>
+                <h2>Editando a: Ana PÃ©rez</h2>
                 <form class="formulario" action="gestionPacientes.jsp" method="GET">
                     
                     <div class="fila-doble">
-                        <input type="text" name="nombre" placeholder="Nombre completo" value="Ana Pérez" required />
-                        <input type="text" name="cedula" placeholder="Cédula del paciente" value="1712345678" required />
+                        <input type="text" name="nombre" placeholder="Nombre completo" value="Ana PÃ©rez" required />
+                        <input type="text" name="cedula" placeholder="CÃ©dula del paciente" value="1712345678" required />
                     </div>
 
                     <div class="fila-doble">
-                        <input type="email" name="correo" placeholder="Correo electrónico" value="ana.perez@email.com" required />
-                        <input type="tel" name="telefono" placeholder="Teléfono" value="0987654321" required/>
+                        <input type="email" name="correo" placeholder="Correo electrÃ³nico" value="ana.perez@email.com" required />
+                        <input type="tel" name="telefono" placeholder="TelÃ©fono" value="0987654321" required/>
                     </div>
                     
                     <label for="fechaNacimiento" style="margin-top: 1rem; color: #555;">Fecha de nacimiento</label>

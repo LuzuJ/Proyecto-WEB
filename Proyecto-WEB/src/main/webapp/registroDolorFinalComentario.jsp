@@ -1,10 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Panel de Terapia</title>
+  <title>Evaluaci贸n Final</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
 </head>
 
@@ -12,34 +13,42 @@
   <div class="barra">
     <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Logo Equilibrio Vital" class="logo">
     <h1 class="marca">Equilibrio Vital</h1>
-    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesi髇</button>
+    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesi贸n</button>
   </div>
 
   <div class="panel">
     <div class="menu-lateral">
-      <button class="btn-menu activo">Mi Sesi髇 Actual</button>
+      <button class="btn-menu activo">Mi Sesi贸n Actual</button>
     </div>
 
     <div class="contenido-panel">
       <div class="tarjeta" style="padding: 2rem;">
-        <h2>Evaluaci髇 despu閟 de la sesi髇</h2>
+        <h2>Evaluaci贸n despu茅s de la sesi贸n</h2>
 
-        <form class="formulario">
-          <label for="dolorFinal" class="texto-label" style="margin-bottom: 1rem;">Nivel de molestia al final</label>
+        <%-- El formulario ahora env铆a los datos al servlet v铆a POST --%>
+        <form class="formulario" action="sesion" method="POST">
+            <input type="hidden" name="accion" value="registrarEvaluacion">
+
+            <%-- Mostramos un mensaje de error si existe --%>
+            <% if (request.getAttribute("error") != null) { %>
+                <p style="color: red;"><%= request.getAttribute("error") %></p>
+            <% } %>
+
+          <label for="dolorFinal" style="margin-bottom: 1rem;">Nivel de molestia al final</label>
           <select name="dolorFinal" id="dolorFinal" required style="margin-bottom: 2rem; max-width: 300px;">
             <option value="">Seleccione</option>
-            <option value="0">Sin dolor/molestia</option>
-            <option value="1">Leve</option>
-            <option value="2">Moderado</option>
-            <option value="3">Intenso</option>
-            <option value="4">M醲imo dolor/molestia</option>
+            <option value="Sin dolor/molestia">Sin dolor/molestia</option>
+            <option value="Leve">Leve</option>
+            <option value="Moderado">Moderado</option>
+            <option value="Intenso">Intenso</option>
+            <option value="M谩ximo dolor/molestia">M谩ximo dolor/molestia</option>
           </select>
 
-          <label for="comentario" class="texto-label" style="margin-bottom: 1rem;">Comentario sobre la sesi髇</label>
+          <label for="comentario" style="margin-bottom: 1rem;">Comentario sobre la sesi贸n</label>
           <textarea id="comentario" name="comentario" rows="5" required
             style="margin-bottom: 2rem; max-width: 100%;"></textarea>
 
-          <a href="dashboardPaciente.jsp" class="btn btn-grande-centro">Finalizar Sesi髇</a>
+          <button type="submit" class="btn btn-grande-centro">Finalizar y Guardar Sesi贸n</button>
         </form>
 
       </div>

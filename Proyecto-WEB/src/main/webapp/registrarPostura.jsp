@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,7 @@
   <div class="barra">
     <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Logo" class="logo" />
     <div class="marca">Equilibrio Vital - Panel de Administrador</div>
-    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesión</button>
+    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesiÃ³n</button>
   </div>
   <div class="panel">
     <div class="menu-lateral">
@@ -21,8 +22,8 @@
         <h2>Registrar Nueva Postura</h2>
         <form class="formulario" action="gestionPosturas.jsp" method="GET" enctype="multipart/form-data">
           <div class="fila-doble">
-            <input type="text" name="nombre_es" placeholder="Nombre en Español" required>
-            <input type="text" name="nombre_sn" placeholder="Nombre en Sánscrito (Opcional)">
+            <input type="text" name="nombre_es" placeholder="Nombre en EspaÃ±ol" required>
+            <input type="text" name="nombre_sn" placeholder="Nombre en SÃ¡nscrito (Opcional)">
           </div>
           <fieldset style="margin: 1.5rem 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;">
             <legend>Tipos de Terapia Asociados</legend>
@@ -36,7 +37,7 @@
             </div>
           </fieldset>
           <div class="fila-doble">
-            <div><label>Fotografía de la postura</label><input type="file" name="foto" accept="image/*"></div>
+            <div><label>FotografÃ­a de la postura</label><input type="file" name="foto" accept="image/*"></div>
             <div><label>Video de la postura (link YouTube)</label><input type="text" name="video" placeholder="https://www.youtube.com/watch?v=..."></div>
           </div>
           <textarea name="instrucciones" rows="4" placeholder="Instrucciones paso a paso..." style="margin-top: 1rem;"></textarea>

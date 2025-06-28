@@ -1,3 +1,5 @@
+<%@ page import="com.equilibriovital.modelo.Postura" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,25 +17,33 @@
   </div>
 
   <main class="contenido-panel">
+    <%-- Obtenemos el objeto 'posturaDetallada' que nos envió el servlet --%>
+    <% Postura postura = (Postura) request.getAttribute("posturaDetallada"); %>
+
     <div class="tarjeta">
       <h2>Instrucciones de la postura</h2>
 
-      <p><strong>Nombre:</strong> <span id="postura-nombre">Postura del Gato-Vaca</span></p>
-      <p><strong>Nombre en S�nscrito:</strong> <span id="postura-sanskrito">Marjaryasana-Bitilasana</span></p>
-      <p><strong>Beneficios:</strong> <span id="postura-beneficios">Mejora la flexibilidad de la columna, alivia el estr�s y fortalece las mu�ecas, hombros y caderas.</span></p>
-      <p><strong>Instrucciones:</strong> <span id="postura-instrucciones">Comienza en cuatro puntos. Inhala en la Vaca arqueando la espalda, exhala en el Gato redondeando la columna. Alterna los movimientos con la respiraci�n.</span></p>
+        <% if (postura != null) { %>
+            <p><strong>Nombre:</strong> <span><%= postura.getNombre() %></span></p>
+            <p><strong>Nombre en Sánscrito:</strong> <span>(Marjaryasana-Bitilasana)</span></p>
+            <p><strong>Beneficios:</strong> <span><%= postura.getBeneficios() %></span></p>
+            <p><strong>Instrucciones:</strong> <span><%= postura.getInstrucciones() %></span></p>
 
-      <div class="video-container"
-        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-        <iframe id="youtube-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src=""
-          title="Reproductor de video de YouTube" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+                <iframe id="youtube-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                        src="<%= postura.getVideoUrl() %>"
+                        title="Reproductor de video de YouTube" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        <% } else { %>
+            <p>No se encontraron los detalles de la postura.</p>
+        <% } %>
 
       <div style="margin-top: 2rem;">
-        <a id="regresar-btn" href="posturaEjecucion.jsp" class="btn btn-primario">Regresar</a>
+        <%-- Este enlace debería volver a la ejecución, llamando al controlador --%>
+        <a id="regresar-btn" href="sesion?accion=notificarFinTemporizador" class="btn btn-primario">Regresar a la Sesión</a>
       </div>
     </div>
   </main>

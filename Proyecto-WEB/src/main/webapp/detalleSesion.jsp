@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +13,7 @@
   <div class="barra">
     <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Logo Equilibrio Vital" class="logo" />
     <h1 class="marca">Equilibrio Vital</h1>
-    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesiÛn</button>
+    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesi√≥n</button>
   </div>
 
   <div class="panel">
@@ -27,11 +28,11 @@
         <div class="tarjeta" style="margin-top: 2rem; padding: 1.5rem;">
           <p><strong>Fecha:</strong> 2025-06-03</p>
           <p><strong>Hora de inicio:</strong> 15:00 pm</p>
-          <p><strong>DuraciÛn efectiva:</strong> 22 minutos</p>
+          <p><strong>Duraci√≥n efectiva:</strong> 22 minutos</p>
           <p><strong>Pausas realizadas:</strong> 1</p>
           <p><strong>Intensidad inicial:</strong> Moderado</p>
           <p><strong>Intensidad final:</strong> Leve</p>
-          <p><strong>Comentario:</strong> Me sentÌ relajado y m·s flexible.</p>
+          <p><strong>Comentario:</strong> Me sent√≠ relajado y m√°s flexible.</p>
         </div>
 
         <div style="margin-top: 2rem;">

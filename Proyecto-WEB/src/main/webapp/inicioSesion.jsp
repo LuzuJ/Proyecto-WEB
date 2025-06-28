@@ -1,10 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equilibrio Vital - Inicio de Sesión</title>
+  <title>Equilibrio Vital - Inicio de SesiÃ³n</title>
  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
 </head>
 
@@ -13,9 +14,9 @@
     <h1 class="titulo-logo">Equilibrio Vital</h1>
     <div class="contenedor-formulario">
       <form class="formulario" method="POST">
-        <h2 style="margin-bottom: 1.5rem;">Iniciar Sesión</h2>
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
+        <h2 style="margin-bottom: 1.5rem;">Iniciar SesiÃ³n</h2>
+        <input type="email" name="correo" placeholder="Correo electrÃ³nico" required>
+        <input type="password" name="password" placeholder="ContraseÃ±a" required>
 
         <div class="grupo-botones-rol">
           <div class="fila-doble-rol">
@@ -25,13 +26,13 @@
           <button type="submit" formaction="gestionPosturas.jsp" class="btn btn-secundario btn-rol">Entrar como Administrador</button>
         </div>
         <p class="enlace-registro">
-          ¿Eres instructor y no tienes cuenta?
-          <a href="registro.jsp">Regístrate aquí</a>
+          Â¿Eres instructor y no tienes cuenta?
+          <a href="registro.jsp">RegÃ­strate aquÃ­</a>
         </p>
 
         <p class="enlace-registro" style="margin-top: 0.5rem;">
-          ¿Eres un paciente nuevo?
-          <a href="activarCuenta.jsp">Activa tu cuenta aquí</a>
+          Â¿Eres un paciente nuevo?
+          <a href="activarCuenta.jsp">Activa tu cuenta aquÃ­</a>
         </p>
 
       </form>

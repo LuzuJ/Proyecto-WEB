@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -49,18 +50,18 @@
         <h2>Registro para instructores</h2>
 
         <input type="text" name="nombre" placeholder="Nombre completo" required>
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
+        <input type="email" name="correo" placeholder="Correo electrÃ³nico" required>
+        <input type="password" name="password" placeholder="ContraseÃ±a" required>
+        <input type="password" name="confirmar" placeholder="Confirmar contraseÃ±a" required>
 
-        <label for="documento" style="color:white; margin-top:1rem; margin-bottom:0.5rem; font-size:0.9rem;">Documento de certificación (PDF, JPG)</label>
+        <label for="documento" style="color:white; margin-top:1rem; margin-bottom:0.5rem; font-size:0.9rem;">Documento de certificaciÃ³n (PDF, JPG)</label>
         <input type="file" name="documento" id="documento" accept=".pdf,.jpg,.jpeg,.png" required>
 
         <button type="submit" class="btn btn-primario">Registrarme como Instructor</button>
 
         <p class="enlace-login">
-          ¿Ya tienes cuenta?
-          <a href="inicioSesion.jsp">Inicia sesión</a>
+          Â¿Ya tienes cuenta?
+          <a href="inicioSesion.jsp">Inicia sesiÃ³n</a>
         </p>
       </form>
     </div>

@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,7 @@
   <div class="barra">
     <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Logo" class="logo" />
     <div class="marca">Equilibrio Vital</div>
-    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesión</button>
+    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.jsp'">Cerrar sesiÃ³n</button>
   </div>
 
   <div class="panel">
@@ -18,14 +19,14 @@
      <div class="menu-lateral">
         <button class="btn-menu" onclick="location.href='dashboard.jsp'">Dashboard</button>
         <button class="btn-menu" onclick="location.href='gestionPacientes.jsp'">Gestionar pacientes</button>
-        <button class="btn-menu" onclick="location.href='crearSerie.jsp'">Crear serie terapéutica</button>
+        <button class="btn-menu" onclick="location.href='crearSerie.jsp'">Crear serie terapÃ©utica</button>
         <button class="btn-menu" onclick="location.href='asignarSerie.jsp'">Asignar serie</button>
       </div>
 
     <div class="contenido-panel">
       <div class="tarjeta">
         <h2>Bienvenido, Instructor</h2>
-        <p>Desde este panel puedes gestionar pacientes, crear y asignar series terapéuticas, y hacer seguimiento a las sesiones completadas.</p>
+        <p>Desde este panel puedes gestionar pacientes, crear y asignar series terapÃ©uticas, y hacer seguimiento a las sesiones completadas.</p>
         <ul>
           <li><strong>Pacientes registrados:</strong></li>
           <li><strong>Series creadas:</strong></li>

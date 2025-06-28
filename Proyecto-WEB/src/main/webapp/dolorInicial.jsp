@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,30 +19,34 @@
   <div class="panel">
     <div class="menu-lateral">
       <button class="btn-menu activo">Mi Sesión Actual</button>
+      <button class="btn-menu">Mi Historial</button>
     </div>
 
   <main class="contenido-panel">
     <div class="tarjeta" style="text-align: center;">
-      <h2 class="titulo-seccion">Iniciar sesión terapéutica</h2>
+      <h2>Iniciar sesión terapéutica</h2>
       <p style="margin-bottom: 2rem; font-style: italic; color: #555;">
         “Empieza a sanar”
       </p>
 
-      <form class="formulario" style="align-items: center;">
+      <form class="formulario" action="sesion" method="POST" style="align-items: center;">
+        
+        <input type="hidden" name="accion" value="registrarDolor">
+
         <label for="dolorInicio" style="margin-bottom: 1rem;">Antes de comenzar. Selecciona tu nivel de molestia al inicio</label>
         <select name="dolorInicio" id="dolorInicio" required style="margin-bottom: 2rem; max-width: 300px;">
           <option value="">Seleccione</option>
-          <option value="0">Sin dolor/molestia</option>
-          <option value="1">Leve</option>
-          <option value="2">Moderado</option>
-          <option value="3">Intenso</option>
-          <option value="4">Máximo dolor/molestia</option>
+          <option value="Sin dolor/molestia">Sin dolor/molestia</option>
+          <option value="Leve">Leve</option>
+          <option value="Moderado">Moderado</option>
+          <option value="Intenso">Intenso</option>
+          <option value="Máximo dolor/molestia">Máximo dolor/molestia</option>
         </select>
-        <a href="posturaEjecucion.jsp" class="btn btn-grande-centro">Registrar dolor</a>
+        
+        <button type="submit" class="btn btn-grande-centro">Registrar dolor</button>
       </form>
     </div>
   </main>
   </div>
 </body>
-
 </html>
